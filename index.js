@@ -1,9 +1,28 @@
-console.log(null === undefined);
+// console.log(null === undefined);
 
-const alex = 'alexNew';
+// const alex = 'alexNew';
 
-const user = {
-  alex,
+// const user = {
+//   alex,
+// };
+
+// console.log(user.alex);
+
+let x = 1;
+
+const parentFunction = () => {
+  let y = 5;
+  console.log(x);
+  console.log(y);
+
+  const childFunction = () => {
+    console.log((x += 5));
+    console.log((y += 2));
+  };
+  return childFunction;
 };
 
-console.log(user.alex);
+const result = parentFunction();
+
+result();
+result();
